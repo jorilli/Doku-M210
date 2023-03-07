@@ -1,0 +1,15 @@
+variables:
+  RG_NAME:
+    value: "uek-210"
+  LOCATION:
+    value: "switzerlandnorth"
+
+default:
+  image: mcr.microsoft.com/azure-cli:latest
+  before_script:
+    - az login --service-principal -u eac396b0-c31e-4c92-af4c-5e2c19d132ba -p Cr.8Q~NCijtNw5EpSwa_SPy7IQ0~uNxESXOXjdl6 --tenant 02b7e332-b310-470b-8eef-729bfcf99667
+    
+deploy:resource-group:
+  stage: deploy
+  script: 
+    - az deployment sub create --location ${LOCATION} --template-file rg.bicep --parameters name=${RG_NAME}
