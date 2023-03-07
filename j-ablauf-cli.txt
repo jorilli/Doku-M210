@@ -1,0 +1,10 @@
+az login
+
+az deployment sub create --location 'switzerlandnorth' --template-file rg.bicep --parameters name='uek-210'
+
+
+az login --service-principal -u 7009cd7a-90d0-4146-a4fd-4dc808316dd5 -p Dx68Q~IEr4oKPhU~Hix_EHlH_w_JoS7-zSgJxa6A --tenant 0eb60a94-6808-4b69-b946-231aa9e20351
+az login --service-principal -u APP_ID -p PASSWORD --tenant TENANT
+
+az login --service-principal -u 7009cd7a-90d0-4146-a4fd-4dc808316dd5 -p Dx68Q~IEr4oKPhU~Hix_EHlH_w_JoS7-zSgJxa6A --tenant 0eb60a94-6808-4b69-b946-231aa9e20351
+az deployment sub create --location switzerlandnorth --template-file rg.bicep --parameters name=uek-210
