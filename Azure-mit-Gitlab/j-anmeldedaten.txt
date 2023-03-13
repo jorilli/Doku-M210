@@ -1,0 +1,110 @@
+create service principal output:
+
+{
+  "appId": "7009cd7a-90d0-4146-a4fd-4dc808316dd5",
+  "displayName": "azure-cli-2023-03-07-08-28-23",
+  "password": "Dx68Q~IEr4oKPhU~Hix_EHlH_w_JoS7-zSgJxa6A",
+  "tenant": "0eb60a94-6808-4b69-b946-231aa9e20351"
+}
+ 
+ az login output:
+ 
+ {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "0eb60a94-6808-4b69-b946-231aa9e20351",
+    "id": "d19d58b5-12fa-43a3-a3a5-7bdf7b59708d",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Azure for Students",
+    "state": "Enabled",
+    "tenantId": "0eb60a94-6808-4b69-b946-231aa9e20351",
+    "user": {
+      "name": "jori210@outlook.com",
+      "type": "user"
+    }
+  }
+
+
+  az deployment sub create output:
+
+  {
+  "id": "/subscriptions/d19d58b5-12fa-43a3-a3a5-7bdf7b59708d/providers/Microsoft.Resources/deployments/rg",
+  "location": "switzerlandnorth",
+  "name": "rg",
+  "properties": {
+    "correlationId": "b6fe2f95-2ac6-4c0f-bb52-f51b8931f0c0",
+    "debugSetting": null,
+    "dependencies": [],
+    "duration": "PT1.6220299S",
+    "error": null,
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": [
+      {
+        "id": "/subscriptions/d19d58b5-12fa-43a3-a3a5-7bdf7b59708d/resourceGroups/uek-210"
+      }
+    ],
+    "outputs": null,
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "switzerlandnorth"
+      },
+      "name": {
+        "type": "String",
+        "value": "uek-210"
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Resources",
+        "providerAuthorizationConsentState": null,
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "switzerlandnorth"
+            ],
+            "properties": null,
+            "resourceType": "resourceGroups",
+            "zoneMappings": null
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "templateHash": "9251294638613494146",
+    "templateLink": null,
+    "timestamp": "2023-03-07T07:54:00.759146+00:00",
+    "validatedResources": null
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/deployments"
+}
+
+az login with service principal:
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "0eb60a94-6808-4b69-b946-231aa9e20351",
+    "id": "d19d58b5-12fa-43a3-a3a5-7bdf7b59708d",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Azure for Students",
+    "state": "Enabled",
+    "tenantId": "0eb60a94-6808-4b69-b946-231aa9e20351",
+    "user": {
+      "name": "7009cd7a-90d0-4146-a4fd-4dc808316dd5",
+      "type": "servicePrincipal"
+    }
+  }
+]
